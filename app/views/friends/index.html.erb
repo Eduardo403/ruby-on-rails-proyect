@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Friends</h1>
+
+<table class="table ">
+
+  <thead class="table-dark">
+    <tr>
+
+      <th scope="col">First name:</th>
+      <th scope="col">Last name:</th>
+      <th scope="col">Email:</th>
+      <th scope="col">Phone:</th>
+      <th scope="col">Twitter:</th>
+      <th scope="col">see this friend</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody >
+
+  <% @friends.each do |friend| %>
+    <%= render friend %>
+  <th>
+
+      <button type="button" class="btn btn-outline-info"><%= link_to "Info", friend %></button>
+
+    </th>
+  <% end %>
+</tbody>
+</table>
+<button type="button" class="btn btn-outline-primary"><%= link_to "New friend", new_friend_path %></button>
+
+
+
+
